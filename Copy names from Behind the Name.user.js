@@ -22,8 +22,8 @@ function handleNames() {
   var nameList = Array.from(document.getElementsByClassName('listname'))
   	.map((span) => span.firstChild.text)
   	.map((name) => name[0].toUpperCase() + name.slice(1).toLowerCase())
+  	.map((name) => name.replace(/\s+\(.+\)/g, ''))
   	.join("\n");
-  console.log(nameList);
-  
+ 
 	GM.setClipboard(nameList);
 }
