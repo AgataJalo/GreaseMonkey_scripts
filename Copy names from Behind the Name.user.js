@@ -23,7 +23,12 @@ function handleNames() {
   	.map((span) => span.firstChild.text)
   	.map((name) => name[0].toUpperCase() + name.slice(1).toLowerCase())
   	.map((name) => name.replace(/\s+\(.+\)/g, ''))
+  	.filter(onlyUnique)
   	.join("\n");
  
 	GM.setClipboard(nameList);
+}
+
+function onlyUnique(value, index, self) { 
+    return self.indexOf(value) === index;
 }
