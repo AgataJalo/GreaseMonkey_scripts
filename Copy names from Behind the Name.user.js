@@ -2,7 +2,7 @@
 // @name     Copy names from Behind the Name
 // @version  1
 // @grant    GM.setClipboard
-// @include	 https://www.behindthename.com/names/*
+// @include  https://www.behindthename.com/names/*
 // ==/UserScript==
 
 var buttonContainerNode = document.createElement('div');
